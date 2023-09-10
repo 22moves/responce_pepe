@@ -402,8 +402,8 @@ padding-block: 2rem;
     fill: var(--first-color);
     filter: drop-shadow(0 0.2rem 0.7rem rgba(255, 230, 0, 0.808));
 }
-.about__image,
-.home__image{
+.about__image{
+   
     width: 100%;
 
 }
@@ -519,7 +519,7 @@ padding-block: 2rem;
     align-items: center;
     justify-content: center;
     padding-block: 1rem;
-    margin-bottom: 10%;
+    row-gap: rem;
     padding: 15%;
     
    
