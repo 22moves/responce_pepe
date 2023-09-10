@@ -53,6 +53,8 @@
     
 }
 }
+
+
 /*================= BASE =================*/
 
 *{
@@ -125,7 +127,7 @@ img,svg{
 }
 
 .section{
-    padding-block: 5rem 2rem;
+    padding-block: 2rem 2rem;
 }
 
 .section-title,
@@ -151,7 +153,8 @@ img,svg{
 
 .main{
     overflow: hidden;
-    max-width: 1152px !important;
+    max-width: 1920px !important;
+    margin: 0 auto;
 }
 
 
@@ -329,8 +332,12 @@ img,svg{
 
 }
 .home__data{
-    text-align: center;
+   
+    justify-items: left;
+    align-items: left;
     padding-top: 7rem;
+   
+    
 }
 
 .home__text,
@@ -361,6 +368,7 @@ padding-block: 2rem;
     position: relative;
     display: flex;
     justify-content: center;
+    padding-block: 5%;
     column-gap: 1.25rem;
  
   
@@ -371,9 +379,10 @@ padding-block: 2rem;
     background-color: var(--first-color);
     color: black;
     font-size: 2rem;
-    clip-path: circle(50%);
+    clip-path: circle(40%);
     padding: 2%;
     transition: transform .4s;
+    filter: drop-shadow(0 0.2rem 0.7rem rgba(255, 230, 0, 0.808));
 }
 
 .home__social-link:hover{
@@ -395,9 +404,11 @@ padding-block: 2rem;
 }
 .about__image,
 .home__image{
-    min-width: 10%;
+    width: 100%;
 
 }
+
+
 
 
 /*================= BUTTON =================*/
@@ -414,7 +425,7 @@ padding-block: 2rem;
     filter: drop-shadow(0 0.2rem 0.7rem rgba(255, 230, 0, 0.681));
     cursor: pointer;
     transition: transform 0.3s ease;
-    margin: 15%;
+    margin: 10%;
 }
 
 .button:hover{
@@ -425,9 +436,8 @@ padding-block: 2rem;
 
 
 /*================= ABOUT =================*/
-.about__container{
-    row-gap: 2.5rem;
-}
+
+
 
 .about__data{
     text-align: center;
@@ -533,7 +543,7 @@ padding-block: 2rem;
 .tokenomics__modal{
     position: absolute;
     left:0;
-    bottom: -100%;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(0deg, rgba(255, 230, 0, 0.36) 0%, rgba(255, 255, 255, 0.00) 69.1%);
@@ -588,10 +598,10 @@ padding-block: 2rem;
     font-size: 1.5rem;
 }
 
-.tokenomics__card:hover .tokenomics__modal{
+/*.tokenomics__card:hover .tokenomics__modal{
     bottom: 0;
 
-}
+}*/
 
 /*================= FOOTER =================*/
 .footer__title{
@@ -672,6 +682,29 @@ padding-block: 2rem;
     bottom: 3rem;
 }
 
+footer{
+    padding-block:10%;
+    background-color: var(--container-color);
+}
+
+
+
+.partners__container{
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    padding-block: 10%;
+   
+}
+
+
+
+
+
+
+
+
+
 
 /*================= BREAKPOINTS  =================*/
 /*small_devices*/
@@ -686,20 +719,25 @@ padding-block: 2rem;
 }
 
 
+.home__data{
+    text-align: center;
+}
 
 /*medium_devices*/
 
 
 @media screen and (min-width: 576px){
+    
     .nav__menu{
         width: 55%;
     }
-    
+    .roadmap__card{
+        font-size: var(--bigger-font-size);
+    }
     .about__data{
-        justify-self: center;
-        justify-content: center;
-
-        width: 50%;
+     text-align: center;
+     font-size: var(--bigger-font-size);
+       
     }
 
     .roadmap__container{
@@ -708,54 +746,126 @@ padding-block: 2rem;
         padding-block: 3rem;
        
     }
-     
+    .home__data{
+        text-align: center;
+    }
+    
+    .partners__container{
+        display: flex;
+        flex-direction: row;
+        margin: 10%;
+        padding-block: 0%;
+        flex-grow: 0;
+       
+    }
+    .partners__logo
+    {
+        width: 20%;
+    } 
+
     }
 
 /*large_devices*/
 
 
 @media screen and (min-width: 768px){
+    .button{
+        font-size: var(--bigger-font-size);
+    }
    
     .roadmap__container{
         grid-template-columns:repeat(3, 1fr);
         align-items: center;
+       
         padding-block: 1rem;
        
     }
-.home__container,
-.tokenomics__container
+.home__container
     {
         grid-template-columns:repeat(1, 1fr);
         align-items: center;
         padding-block: 2rem;
 
-        display: grid;
-       
+        display: flex;
         align-items: center;
         justify-content: center;
         padding-block: 1rem;
         row-gap: rem;
-        padding: 5%;
-    }
-
+        padding: 5% 2%;
+        text-align: center;
+    }.button{
+    text-align: left;
+    margin: 10%;
+}
+.about__text{
+    margin-bottom: 3rem;
+    font-size: var(--bigger-font-size);
+    text-align: left;
 }
 
+.about__container{
+    
+    display: flex;
+    flex-flow: row;
+
+    padding: 20px; 
+   
+
+    justify-content: space-around;
+    column-gap: 3%;
+    grid-template-columns: repeat(2, 1fr) ;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: var(--smaller-font-size);
+    
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 5%;
+}
+
+.tokenomics__container{
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10%;
+
+
+}
+.tokenomics__card{
+    width: 50%;
+
+}
+.about__data{
+    text-align: left;
+}
 
 /*extra_large_devices*/
-
+}
 
 @media screen and (min-width: 1024px){
-    .container {
-      
+    .roadmap__container,
+    .home__container,
+.tokenomics__container{
+    margin: auto;
 
 }
-.home__container{
-   
-        display: flex;
-        flex-flow: row;
+.home__social{
+    justify-content: left;
 }
 
-.home.about_blob{
+.home__pic{
+    width: 100%;
+}
+.tokenomics__container{
+    padding: 5% 2%;
+    grid-template-columns:repeat(4, 1fr);
+    align-items: center;
+
+}
+
+
+.home.about__blob{
     width: 550px;
 }
 .home__content{
@@ -763,15 +873,12 @@ padding-block: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
   
     font-size: var(--smaller-font-size);
-    width: 100%;
+    
     grid-template-columns: repeat(2, 1fr) !important;
-   column-gap: 5%;
-
-
-
-
+    column-gap: 5%;
 }
 .home__text, .home__title, .home__subtitle, .home__desc{
   text-align: left;
@@ -787,12 +894,39 @@ padding-block: 2rem;
    
     justify-content: space-around;
 }
-.about__data{
-    padding-block: 0;
+
+.about__data,
+.home__data{
+
+text-align: left;
+}
+/*.about__data{
+    display: flex;
+    flex-flow: row-reverse;
+
+    padding: 20px; /* Add padding for spacing 
+    background-color: red;
+
+    justify-content: space-around;
+    column-gap: 3%;
+    grid-template-columns: repeat(2, 1fr) ;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: var(--smaller-font-size);
+    
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 5%;
+
+
+}*/
+
 }
 
-.tokenomics__container{
-    padding:20%;
 
-}
+.button{
+    text-align: left;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
 }
