@@ -154,7 +154,7 @@ img,svg{
 .main{
     overflow: hidden;
     max-width: 1920px !important;
-    margin: 0 auto;
+    margin: 3%;
 }
 
 
@@ -462,10 +462,12 @@ padding-block: 2rem;
 /*================= ROADMAP =================*/
 
 .roadmap{
-    margin: 0;
+    
+    
 }
 
 .roadmap__container{
+    
     row-gap: 2rem;
     padding-block: 1rem;
     padding-inline: 5%;
@@ -504,7 +506,10 @@ padding-block: 2rem;
 /*================= TOKENOMICS =================*/
 
 .tokenomics{
+     
    background-color: var(--container-color);
+   width: 100%;
+   border-radius: 1rem;
 }
 
 .tokenomics__container{
@@ -514,7 +519,7 @@ padding-block: 2rem;
     align-items: center;
     justify-content: center;
     padding-block: 1rem;
-    row-gap: rem;
+    margin-bottom: 10%;
     padding: 15%;
     
    
